@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide-In Navigation Menu</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-black font-mono text-white">
+    <nav class="flex justify-between items-center p-4">
+        <p class="text-pink-600 font-bold text-xl">Retro<span class="text-purple-600">Flicks</span></p>
+        <!--Hamburger menu icon svg to trigger the slide-in menu when clicked-->
+        <div onclick="openNav()">
+          <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12" viewBox="0 0 18.853 12">
+            <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-4.5 -8)">
+              <path id="Path_3" data-name="Path 3" d="M4.5,18H23.353" transform="translate(0 -4)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2" />
+              <path id="Path_4" data-name="Path 4" d="M4.5,9H23.353" transform="translate(0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2" />
+              <path id="Path_5" data-name="Path 5" d="M4.5,27H23.353" transform="translate(0 -8)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2" />
+            </g>
+          </svg>
+        </div>
+    
+        <!--background overlay element, will close navbar when clicked-->
+        <div onclick="exitNav()" id="sideBar" class="fixed top-0 right-0 bg-transparent w-0 h-full overflow-x-hidden duration-500 z-10">
+    
+          <!--navigation menu box-->
+          <div id="sideNav" class="fixed top-0 right-0 bg-gradient-to-r from-pink-600 to-purple-600 text-black w-0 h-full flex justify-center items-center overflow-x-hidden duration-500 font-bold z-50">
+            <!--exit icon, will close navbar when clicked-->
+            <a href="javascript:void(0)" onclick="exitNav()" class="text-3xl absolute top-0 right-0 mr-3 mt-2">&times;</a>
+            <!--menu links-->
+            <ul class="text-2xl sm:text-3xl ">
+                <li class="p-2"><a href="#">Films</a></li>
+                <li class="p-2"><a href="#">Docus</a></li>
+                <li class="p-2"><a href="#">Notes</a></li>
+                <li class="p-2"><a href="#">Shop</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!--just a hero section with generic content-->
+    <section class="mt-8 px-2 text-white flex justify-center ">
+        <div class="bg-black p-4 w-2/3 border-4 border-pink-600 border-double">
+        <h1 class="text-3xl font-bold mb-2 text-purple-600">Taxi Driver (1976)</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+
+    <script src="./menu.js"></script>
+</body>
+</html>
